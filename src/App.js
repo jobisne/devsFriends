@@ -30,7 +30,7 @@ class App extends Component {
         .toLocaleLowerCase()
         .includes(searchField.toLocaleLowerCase());
     });
-    return  !robots ? 
+    return  !robots.length ? 
       (<div><h1>LOADING</h1></div>)  :
     (
       <div className="tc">
