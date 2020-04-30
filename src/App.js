@@ -1,26 +1,53 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+// import { robots } from "./robots";
+import CardList from "./components/CardList";
+import Search from "./components/Search";
+import Scroll from "./components/Scroll";
+import ErrorBoundary from "./components/ErrorBoundary";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      robots: [],
+      searchField: "",
+    };
+  }
+  componentDidMount() {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((res) => res.json())
+      .then((user) => {this.setState({ robots: user })});
+  }
+  handleChange = (event) => {
+    this.setState({ searchField: event.target.value });
+  };
+
+  render() {
+      const { robots, searchField } = this.state
+
+    const filterList =robots.filter((robot) => {
+      return robot.username
+        .toLocaleLowerCase()
+        .includes(searchField.toLocaleLowerCase());
+    });
+    return  !robots ? 
+      (<div><h1>LOADING</h1></div>)  :
+    (
+      <div className="tc">
+        <h1 className="f1">MYDEVSFRIENDS</h1>
+        <Search
+          value={searchField}
+          handleChange={this.handleChange}
+        />
+        <Scroll>
+          <ErrorBoundary>
+            <CardList robots={filterList} />
+          </ErrorBoundary>          
+        </Scroll>
+        
+      </div>
+    );
+  }
 }
 
 export default App;
