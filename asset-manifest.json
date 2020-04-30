@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/devsFriends/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/devsFriends/static/js/main.4396ffa3.chunk.js",
+    "main.js.map": "/devsFriends/static/js/main.4396ffa3.chunk.js.map",
+    "runtime-main.js": "/devsFriends/static/js/runtime-main.6abeba7e.js",
+    "runtime-main.js.map": "/devsFriends/static/js/runtime-main.6abeba7e.js.map",
+    "static/css/2.036b41f9.chunk.css": "/devsFriends/static/css/2.036b41f9.chunk.css",
+    "static/js/2.289be98e.chunk.js": "/devsFriends/static/js/2.289be98e.chunk.js",
+    "static/js/2.289be98e.chunk.js.map": "/devsFriends/static/js/2.289be98e.chunk.js.map",
+    "index.html": "/devsFriends/index.html",
+    "precache-manifest.1d2dcf6b5ab7690326eb962ac67635a4.js": "/devsFriends/precache-manifest.1d2dcf6b5ab7690326eb962ac67635a4.js",
+    "service-worker.js": "/devsFriends/service-worker.js",
+    "static/css/2.036b41f9.chunk.css.map": "/devsFriends/static/css/2.036b41f9.chunk.css.map",
+    "static/css/main.5ecd60fb.chunk.css.map": "/devsFriends/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.289be98e.chunk.js.LICENSE.txt": "/devsFriends/static/js/2.289be98e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6abeba7e.js",
+    "static/css/2.036b41f9.chunk.css",
+    "static/js/2.289be98e.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.4396ffa3.chunk.js"
+  ]
+}
